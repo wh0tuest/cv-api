@@ -6,9 +6,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
-import javax.swing.Spring;
-import javax.xml.crypto.Data;
-
 @Component 
 public class DataLoader implements CommandLineRunner {
     private final ProjectRepository projectRepository;
