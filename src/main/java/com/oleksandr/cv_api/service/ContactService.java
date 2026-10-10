@@ -6,7 +6,6 @@ import com.oleksandr.cv_api.model.ContactMessage;
 import com.oleksandr.cv_api.repository.ContactMessageRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.stereotype.Service;
 
 @Service 
 public class ContactService {
