@@ -4,7 +4,6 @@ import com.oleksandr.cv_api.dto.HealthResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 public class HealthController {
 
@@ -13,3 +12,4 @@ public class HealthController {
         return new HealthResponse("OK");
     }
 }
+
