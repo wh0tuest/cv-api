@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: cv-postgres
+    environment:
+      POSTGRES_DB: cvdb
+      POSTGRES_USER: cv
+      POSTGRES_PASSWORD: cv
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
