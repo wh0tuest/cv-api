@@ -40,4 +40,12 @@ class ProjectControllerTest {
                 .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.error", containsString("de")));
     }
+
+    @Test 
+    void defaultsToEnglishWhenNoLanguageGiven() throws Exception {
+        mockMvc.perform(get("/api/projects"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(3))
+                .andExpect(jsonPath("$[*].description", hasItem(startsWith("Backend application"))));
+    }
 }
