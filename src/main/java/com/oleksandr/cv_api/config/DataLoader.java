@@ -16,6 +16,9 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        if (projectRepository.count() > 0) {
+            return; // Data already loaded, skip
+        }
         Project nba = new Project("https://github.com/wh0tuest/nba-team-players-management", 1, List.of("Java", "Spring Boot", "Hibernate", "JPA", "Oracle", "REST API"));
  
         nba.addTranslation("en", "NBA Team & Players Management System", "Backend application for managing NBA teams and players, built with Java, Spring Boot, Hibernate/JPA and Oracle. The system provides a REST API for creating, updating, retrieving and deleting teams and players, with relational database mapping and persistent data storage. The project demonstrates practical experience with backend architecture, REST API design, ORM, SQL and database relationships.");
