@@ -1,4 +1,5 @@
 # CV API
+![CI](https://github.com/wh0tuest/cv-api/actions/workflows/ci.yml/badge.svg)
 
 REST API that powers my portfolio website. It serves CV content in three languages (EN / PL / UK) and handles messages from the contact form.
 
