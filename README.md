@@ -13,6 +13,7 @@ REST API that powers my portfolio website. It serves CV content in three languag
 - **PostgreSQL** (Neon in production, Docker locally), **H2** for tests
 - **JUnit 5**, **Mockito**, **MockMvc**
 - **Docker**, **Docker Compose**, deployed on **Render**
+- **Flyway**: versioned database migrations (`src/main/resources/db/migration`)
 
 ## Architecture
 
