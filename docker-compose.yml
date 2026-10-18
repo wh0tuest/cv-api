@@ -11,5 +11,19 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  app:
+    build: .
+    container_name: cv-api
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_URL: jdbc:postgresql://postgres:5432/cvdb
+      DB_USERNAME: cv
+      DB_PASSWORD: cv
+    restart: on-failure
+
 volumes:
   pgdata:
